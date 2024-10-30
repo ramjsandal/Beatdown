@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShapeBehavior : MonoBehaviour
 {
@@ -16,11 +17,25 @@ public class ShapeBehavior : MonoBehaviour
     public VelocityTracker right;
     public OVRInput.Controller controller;
     public bool isLeft;
+    public bool menuShape;
+    public string sceneName;
 
+    private void MenuShape()
+    {
+       SceneManager.LoadScene(sceneName); 
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other != null)
         {
+            if (menuShape)
+            {
+                Invoke("MenuShape", 3);
+                Break(3.5f, false);
+                this.gameObject.GetComponent<Renderer>().enabled = false;
+                this.gameObject.GetComponent<Collider>().enabled = false;
+                return;
+            }
             // get fist speed
             //Vector3 velocity = OVRInput.GetLocalControllerVelocity(controller);
             Vector3 velocity = Vector3.zero;
@@ -52,7 +67,7 @@ public class ShapeBehavior : MonoBehaviour
         }
     }
 
-    private void Break(float speed)
+    private void Break(float speed, bool destroy = true)
     {
         Debug.Log($"called break with speed: {speed}");
         if (speed < .5)
@@ -74,7 +89,10 @@ public class ShapeBehavior : MonoBehaviour
         }
 
         Explode();
-        Destroy(this.gameObject);
+        if (destroy)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void GetControllerVelocities()

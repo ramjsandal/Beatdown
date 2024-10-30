@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/XRA3/XRA3MainMenu.unity
     guid: 5993a5b346266d344ab99c6be8a5d182
+  - enabled: 1
+    path: Assets/XRA3/LevelOne.unity
+    guid: 1f5510c60cfa89944b111e3d86f009e4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 47e1e731a45fe734f9630e83626e2442, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 88454618f27282c4c91818c2ae521ef6, type: 2}
