@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8320056146974430008}
   - component: {fileID: 6887668942144334998}
   - component: {fileID: 6234302481564636776}
+  - component: {fileID: 3230640534335248863}
   m_Layer: 0
   m_Name: Icosphere_cell.003_cell.001
   m_TagString: Untagged
@@ -111,6 +112,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &3230640534335248863
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431319547688951403}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 389739361007650787, guid: 568386bed1398fa43a22c873604a1d06, type: 3}
 --- !u!1 &2039512116246928150
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +146,7 @@ GameObject:
   - component: {fileID: 1611539604241381133}
   - component: {fileID: 8929531021834098546}
   - component: {fileID: 3158425968809385543}
+  - component: {fileID: 6182833349581741763}
   m_Layer: 0
   m_Name: Icosphere_cell.004
   m_TagString: Untagged
@@ -222,6 +246,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &6182833349581741763
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039512116246928150}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5458422319677487947, guid: 568386bed1398fa43a22c873604a1d06, type: 3}
 --- !u!1 &2183156343397681796
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +280,7 @@ GameObject:
   - component: {fileID: 6255349578284289851}
   - component: {fileID: 1316896885927167000}
   - component: {fileID: 4492820237015833428}
+  - component: {fileID: 1067909504133239597}
   m_Layer: 0
   m_Name: Icosphere_cell.003_cell.003
   m_TagString: Untagged
@@ -333,6 +380,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &1067909504133239597
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2183156343397681796}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1238361647557888583, guid: 568386bed1398fa43a22c873604a1d06, type: 3}
 --- !u!1 &2295168372434251815
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +414,7 @@ GameObject:
   - component: {fileID: 8731689932680368177}
   - component: {fileID: 1851761146782342493}
   - component: {fileID: 2478248999508986672}
+  - component: {fileID: 6086187140357320344}
   m_Layer: 0
   m_Name: Icosphere_cell.002
   m_TagString: Untagged
@@ -444,6 +514,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &6086187140357320344
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2295168372434251815}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3301159376018240456, guid: 568386bed1398fa43a22c873604a1d06, type: 3}
 --- !u!1 &4437908135338458945
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +548,7 @@ GameObject:
   - component: {fileID: 6849361255269711186}
   - component: {fileID: 8262790763349465337}
   - component: {fileID: 9178541783287451532}
+  - component: {fileID: 7012850543232909086}
   m_Layer: 0
   m_Name: Icosphere_cell.003_cell.004
   m_TagString: Untagged
@@ -555,6 +648,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &7012850543232909086
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437908135338458945}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5504016042953388431, guid: 568386bed1398fa43a22c873604a1d06, type: 3}
 --- !u!1 &4555820432490732036
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +682,7 @@ GameObject:
   - component: {fileID: 8384898691284685786}
   - component: {fileID: 8133848017974373352}
   - component: {fileID: 8468878739684010686}
+  - component: {fileID: 5071991322795307062}
   m_Layer: 0
   m_Name: Icosphere_cell.003_cell
   m_TagString: Untagged
@@ -666,6 +782,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &5071991322795307062
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4555820432490732036}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2231187615322252695, guid: 568386bed1398fa43a22c873604a1d06, type: 3}
 --- !u!1 &4780995011254830983
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +856,7 @@ GameObject:
   - component: {fileID: 1238562410979580054}
   - component: {fileID: 8498549791119686505}
   - component: {fileID: 7963563665464649176}
+  - component: {fileID: 4540093602711943562}
   m_Layer: 0
   m_Name: Icosphere_cell
   m_TagString: Untagged
@@ -817,6 +956,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &4540093602711943562
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427292505688559269}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3075903766125179893, guid: 568386bed1398fa43a22c873604a1d06, type: 3}
 --- !u!1 &8099767344573954539
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,6 +990,7 @@ GameObject:
   - component: {fileID: 7267664131919085460}
   - component: {fileID: 6049200003062433925}
   - component: {fileID: 8522056228052444031}
+  - component: {fileID: 1779742397295321110}
   m_Layer: 0
   m_Name: Icosphere_cell.001
   m_TagString: Untagged
@@ -928,6 +1090,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &1779742397295321110
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8099767344573954539}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -331871654789393181, guid: 568386bed1398fa43a22c873604a1d06, type: 3}
 --- !u!1 &8307279688573207679
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,6 +1124,7 @@ GameObject:
   - component: {fileID: 6275402850963097989}
   - component: {fileID: 6714110641496446954}
   - component: {fileID: 6614097876011628836}
+  - component: {fileID: 6526180500608352178}
   m_Layer: 0
   m_Name: Icosphere_cell.003_cell.002
   m_TagString: Untagged
@@ -1039,3 +1224,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &6526180500608352178
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307279688573207679}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -183763420676628780, guid: 568386bed1398fa43a22c873604a1d06, type: 3}
