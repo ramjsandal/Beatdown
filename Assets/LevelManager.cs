@@ -45,6 +45,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        Score = 0;
         levelOver = false;
     }
 
@@ -83,7 +84,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void EndLevel(bool win)
+    private void EndLevel(bool win)
     {
         levelOver = true;
         gameoverUI.SetActive(true);
