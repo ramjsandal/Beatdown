@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -3.7493994e-33}
   m_LocalPosition: {x: 0, y: -0, z: 12.13}
-  m_LocalScale: {x: 1, y: 1, z: 0.4}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -151,5 +151,10 @@ MonoBehaviour:
   mediumHit: {fileID: 4780995011254830983, guid: 642c6d8b963ac544bb35e36d6873af44, type: 3}
   largeHit: {fileID: 4312426605692024600, guid: 26d43c3202c43f74787cc75fb2b5dfba, type: 3}
   rb: {fileID: 8720701022804232019}
+  left: {fileID: 0}
+  right: {fileID: 0}
   controller: 1
   isLeft: 1
+  menuShape: 0
+  sceneName: 
+  speed: 0.025

@@ -1,6 +1,7 @@
 using Meta.WitAi;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,10 +20,27 @@ public class ShapeBehavior : MonoBehaviour
     public bool isLeft;
     public bool menuShape;
     public string sceneName;
+    public float speed = .025f;
 
+    private void Start()
+    {
+        var vTrackers = FindObjectsByType<VelocityTracker>(FindObjectsSortMode.InstanceID);
+        left = vTrackers.First(a => a.gameObject.CompareTag("LeftController"));
+        right = vTrackers.First(a => a.gameObject.CompareTag("RightController"));
+    }
     private void MenuShape()
     {
-       SceneManager.LoadScene(sceneName); 
+        SceneManager.LoadScene(sceneName);
+    }
+
+    private void Update()
+    {
+        if (menuShape)
+        {
+            return;
+        }
+
+        this.transform.position -= new Vector3(0, 0, speed);
     }
     private void OnTriggerEnter(Collider other)
     {
