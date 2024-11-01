@@ -20,6 +20,7 @@ public class DoorBehavior : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
+        LevelManager.Instance.LosePoints(100);
         Destroy(this.gameObject);
     }
 }

@@ -22,11 +22,14 @@ public class ShapeBehavior : MonoBehaviour
     public string sceneName;
     public float speed = .025f;
 
+    private bool moveForwards = true;
+
     private void Start()
     {
         var vTrackers = FindObjectsByType<VelocityTracker>(FindObjectsSortMode.InstanceID);
         left = vTrackers.First(a => a.gameObject.CompareTag("LeftController"));
         right = vTrackers.First(a => a.gameObject.CompareTag("RightController"));
+        moveForwards = true;
     }
     private void MenuShape()
     {
@@ -40,7 +43,11 @@ public class ShapeBehavior : MonoBehaviour
             return;
         }
 
-        this.transform.position -= new Vector3(0, 0, speed);
+        if (moveForwards)
+        {
+            this.transform.position -= new Vector3(0, 0, speed);
+        }
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -79,6 +86,8 @@ public class ShapeBehavior : MonoBehaviour
             // otherwise
             {
                 rb.AddForce(velocity * 100);
+                LevelManager.Instance.LosePoints(50);
+                moveForwards = false;
                 Destroy(this.gameObject, 2);
                 Debug.Log("wrong");
             }
@@ -87,7 +96,7 @@ public class ShapeBehavior : MonoBehaviour
 
     private void Break(float speed, bool destroy = true)
     {
-        Debug.Log($"called break with speed: {speed}");
+        int scoreIncrease = 50;
         if (speed < .5)
         {
             // do nothing 
@@ -95,17 +104,21 @@ public class ShapeBehavior : MonoBehaviour
         }
         else if (speed <= 1)
         {
+            scoreIncrease += 10;
             var ob = Instantiate(smallHit, transform.position, Quaternion.identity);
         }
         else if (speed <= 2)
         {
+            scoreIncrease += 15;
             var ob = Instantiate(mediumHit, transform.position, Quaternion.identity);
         }
         else if (speed > 2)
         {
+            scoreIncrease += 25;
             var ob = Instantiate(largeHit, transform.position, Quaternion.identity);
         }
 
+        LevelManager.Instance.GainPoints(scoreIncrease);
         Explode();
         if (destroy)
         {
