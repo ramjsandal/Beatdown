@@ -20,7 +20,7 @@ public class DoorBehavior : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(hit, transform.position, 1.5f);
                 LevelManager.Instance.LosePoints(100);
-                Destroy(this.gameObject);
+                Destroy(this.gameObject, 1);
             }
         }
     }
