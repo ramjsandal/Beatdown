@@ -1407,10 +1407,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.20294139
-  m_Height: 0.8308982
+  m_Radius: 0.10765465
+  m_Height: 1.5110387
   m_Direction: 1
-  m_Center: {x: 0.0015538633, y: 0.32001075, z: 0}
+  m_Center: {x: -0.011799015, y: 0.66008097, z: 0}
 --- !u!1001 &1245167104
 PrefabInstance:
   m_ObjectHideFlags: 0

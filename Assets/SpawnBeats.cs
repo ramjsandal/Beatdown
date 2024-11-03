@@ -31,8 +31,8 @@ public class SpawnBeats : MonoBehaviour
         if (isDoor)
         {
             float scale = 1 + ((float)Random.Range(0, 100) / 100f);
-            var ob = Instantiate(door, new Vector3(xPos, yPos, position.z), Quaternion.identity);
-            ob.transform.localScale = new Vector3(scale, scale, 1); 
+            var ob = Instantiate(door, new Vector3(xPos, position.y, position.z), Quaternion.identity);
+            ob.transform.localScale = new Vector3(scale, scale, 1);
         }
         else if (isLeft)
         {
