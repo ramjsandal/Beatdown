@@ -1,8 +1,5 @@
-using Meta.WitAi;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,8 +9,11 @@ public class ShapeBehavior : MonoBehaviour
     public GameObject smallHit;
     public GameObject mediumHit;
     public GameObject largeHit;
+    public AudioClip correctClip;
+    public AudioClip incorrectClip;
+    public LoadScene loadTheScene;
 
-    public Rigidbody rb;
+    public Rigidbody ribo;
     public VelocityTracker left;
     public VelocityTracker right;
     public OVRInput.Controller controller;
@@ -31,10 +31,6 @@ public class ShapeBehavior : MonoBehaviour
         right = vTrackers.First(a => a.gameObject.CompareTag("RightController"));
         moveForwards = true;
     }
-    private void MenuShape()
-    {
-        SceneManager.LoadScene(sceneName);
-    }
 
     private void Update()
     {
@@ -43,7 +39,7 @@ public class ShapeBehavior : MonoBehaviour
             return;
         }
 
-        if (moveForwards)
+        if (moveForwards && !LevelManager.Instance.levelOver)
         {
             this.transform.position -= new Vector3(0, 0, speed);
         }
@@ -55,14 +51,16 @@ public class ShapeBehavior : MonoBehaviour
         {
             if (menuShape)
             {
-                Invoke("MenuShape", 3);
-                Break(3.5f, false);
-                this.gameObject.GetComponent<Renderer>().enabled = false;
-                this.gameObject.GetComponent<Collider>().enabled = false;
+                if ((other.gameObject.CompareTag("RightController") || other.gameObject.CompareTag("LeftController")))
+                {
+                    loadTheScene.LoadNewScene(sceneName, 1);
+                    Break(1f);
+                }
                 return;
             }
             // get fist speed
-            //Vector3 velocity = OVRInput.GetLocalControllerVelocity(controller);
+            Vector3 velocity = OVRInput.GetLocalControllerVelocity(controller);
+            /*
             Vector3 velocity = Vector3.zero;
             if (other.gameObject.CompareTag("RightController"))
             {
@@ -73,6 +71,7 @@ public class ShapeBehavior : MonoBehaviour
             {
                 velocity = left.GetVelocity();
             }
+            */
 
 
             // if we hit the shape with the right fist
@@ -80,12 +79,16 @@ public class ShapeBehavior : MonoBehaviour
                 (!isLeft && other.gameObject.CompareTag("RightController")))
             {
                 // spawn different thing based on our controller velocity
+
                 Break(velocity.magnitude);
             }
-            else
+            else if ((!isLeft && other.gameObject.CompareTag("LeftController")) ||
+                (isLeft && other.gameObject.CompareTag("RightController")))
             // otherwise
             {
-                rb.AddForce(velocity * 100);
+
+                AudioSource.PlayClipAtPoint(incorrectClip, transform.position);
+                ribo.AddForce(velocity * 100);
                 LevelManager.Instance.LosePoints(50);
                 moveForwards = false;
                 Destroy(this.gameObject, 2);
@@ -94,7 +97,7 @@ public class ShapeBehavior : MonoBehaviour
         }
     }
 
-    private void Break(float speed, bool destroy = true)
+    private void Break(float speed)
     {
         int scoreIncrease = 50;
         if (speed < .5)
@@ -118,12 +121,14 @@ public class ShapeBehavior : MonoBehaviour
             var ob = Instantiate(largeHit, transform.position, Quaternion.identity);
         }
 
-        LevelManager.Instance.GainPoints(scoreIncrease);
-        Explode();
-        if (destroy)
+        if (!menuShape)
         {
-            Destroy(this.gameObject);
+            LevelManager.Instance.GainPoints(scoreIncrease);
         }
+
+        AudioSource.PlayClipAtPoint(correctClip, transform.position);
+        Explode();
+        Destroy(this.gameObject);
     }
 
     private void GetControllerVelocities()
@@ -145,7 +150,7 @@ public class ShapeBehavior : MonoBehaviour
             Rigidbody rb = hit.GetComponent<Rigidbody>();
 
             if (rb != null)
-                rb.AddExplosionForce(1, transform.position, 1, 3.0F);
+                rb.AddExplosionForce(.1f, transform.position, 1, 3.0F);
         }
     }
 
