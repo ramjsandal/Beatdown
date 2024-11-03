@@ -3078,7 +3078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5817f7c0-f2a5-45f9-a5ca-64264e0166e8
-  instanceId: e3c4c557-191c-41bf-a325-b98049477c43
+  instanceId: 7884dc97-92d4-4b05-a9f0-3218907db7ad
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -6199,7 +6199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5817f7c0-f2a5-45f9-a5ca-64264e0166e8
-  instanceId: 467326c8-a200-4b69-b7eb-c60042f65e45
+  instanceId: 08878b84-75f9-49c6-b303-7f765702f0ad
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -8932,7 +8932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e47682b9-c270-40b1-b16d-90b627a5ce1b
-  instanceId: 72b3e6b1-b714-4d72-8ad3-e781304e0930
+  instanceId: d070ab16-d882-4d5a-8e9e-eee041c3128f
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -9172,10 +9172,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.019904684
-  m_Height: 0.5264801
+  m_Radius: 0.07845354
+  m_Height: 0.8904562
   m_Direction: 1
-  m_Center: {x: -0.006338965, y: 0.16780168, z: 0}
+  m_Center: {x: -0.0027405173, y: 0.34978974, z: -0.01579237}
 --- !u!54 &5304907371294431826
 Rigidbody:
   m_ObjectHideFlags: 0
