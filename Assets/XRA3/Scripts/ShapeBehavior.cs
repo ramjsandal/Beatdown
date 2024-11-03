@@ -14,8 +14,6 @@ public class ShapeBehavior : MonoBehaviour
     public LoadScene loadTheScene;
 
     public Rigidbody ribo;
-    public VelocityTracker left;
-    public VelocityTracker right;
     public OVRInput.Controller controller;
     public bool isLeft;
     public bool menuShape;
@@ -26,9 +24,6 @@ public class ShapeBehavior : MonoBehaviour
 
     private void Start()
     {
-        var vTrackers = FindObjectsByType<VelocityTracker>(FindObjectsSortMode.InstanceID);
-        left = vTrackers.First(a => a.gameObject.CompareTag("LeftController"));
-        right = vTrackers.First(a => a.gameObject.CompareTag("RightController"));
         moveForwards = true;
     }
 
@@ -60,19 +55,6 @@ public class ShapeBehavior : MonoBehaviour
             }
             // get fist speed
             Vector3 velocity = OVRInput.GetLocalControllerVelocity(controller);
-            /*
-            Vector3 velocity = Vector3.zero;
-            if (other.gameObject.CompareTag("RightController"))
-            {
-                velocity = right.GetVelocity();
-            }
-
-            if (other.gameObject.CompareTag("LeftController"))
-            {
-                velocity = left.GetVelocity();
-            }
-            */
-
 
             // if we hit the shape with the right fist
             if ((isLeft && other.gameObject.CompareTag("LeftController")) ||
@@ -88,7 +70,7 @@ public class ShapeBehavior : MonoBehaviour
             {
 
                 AudioSource.PlayClipAtPoint(incorrectClip, transform.position);
-                ribo.AddForce(velocity * 100);
+                ribo.AddForce(velocity * 1000);
                 LevelManager.Instance.LosePoints(50);
                 moveForwards = false;
                 Destroy(this.gameObject, 2);
