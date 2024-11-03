@@ -5,13 +5,7 @@ using UnityEngine;
 public class DoorBehavior : MonoBehaviour
 {
     public float speed = .025f;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    public AudioClip hit;
     void Update()
     {
         this.transform.position -= new Vector3(0, 0, speed);
@@ -24,6 +18,7 @@ public class DoorBehavior : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
+                AudioSource.PlayClipAtPoint(hit, transform.position, 1.5f);
                 LevelManager.Instance.LosePoints(100);
                 Destroy(this.gameObject);
             }

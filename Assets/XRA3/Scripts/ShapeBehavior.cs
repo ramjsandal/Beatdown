@@ -69,7 +69,7 @@ public class ShapeBehavior : MonoBehaviour
             // otherwise
             {
 
-                AudioSource.PlayClipAtPoint(incorrectClip, transform.position); 
+                AudioSource.PlayClipAtPoint(incorrectClip, transform.position, 1.5f); 
                 ribo.AddForce((this.transform.position - other.gameObject.transform.position) * 500);
                 LevelManager.Instance.LosePoints(50);
                 moveForwards = false;
